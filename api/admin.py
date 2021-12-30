@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from api.models import Bucketlist, Comment
+
+
+@admin.register(Bucketlist)
+class BucketlistAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass

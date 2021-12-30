@@ -1,9 +1,9 @@
 from django.urls import path, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from .views import CreateView
+from .views import BucketlistView
 
 urlpatterns = {
-    path('bucketlists/', CreateView.as_view(), name="create"),
+    path('bucketlists/<int:pk>', BucketlistView.as_view(), name="crud_view")
 }
 
 urlpatterns = format_suffix_patterns(urlpatterns)

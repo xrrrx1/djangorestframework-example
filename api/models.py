@@ -8,3 +8,12 @@ class Bucketlist(models.Model):
 
     def __str__(self):
         return "{}".format(self.name)
+
+
+class Comment(models.Model):
+    bucketlist = models.ForeignKey(
+        Bucketlist,
+        related_name='comments',
+        on_delete=models.CASCADE,
+    )
+    text = models.CharField(max_length=400)
