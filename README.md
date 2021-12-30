@@ -1,6 +1,6 @@
 # djangorestframework-example
 
-## Instalation
+## Installation
 
 ### git clone repo
 
